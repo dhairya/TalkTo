@@ -1,0 +1,20 @@
+<!doctype html>
+<title>talkTo</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+
+{% block body %}
+
+    <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <dt>name:
+        <dd><input type=text size=30 name=yourname>
+        <dt>office:
+        <dd><input type=text size=30 name=office>
+        <dt>what:
+        <dd><input type=text size=30 name=what>
+        <dd><input type=submit value=submit>
+      </dl>
+    </form>
+{% endblock %}
+</div>
